@@ -21,8 +21,8 @@ jobs:
       - name: Checkout kernel (OxygenOS)
         uses: actions/checkout@v3
         with:
-          repository: Grill-Laux/kernel_oneplus_sdm845
-          ref: oos/11.0-wip
+          repository: OnePlus6T-Development/kernel_oneplus_sdm845
+          ref: sunos/varuna-wip-ksu
       
       - name: Compile Kernel
         run: |
@@ -34,7 +34,7 @@ jobs:
           export CLANG_TRIPLE=aarch64-linux-gnu-
           export CROSS_COMPILE=aarch64-linux-gnu-
           export CROSS_COMPILE_ARM32=arm-linux-gnueabi-
-          make O=out sdm845-perf_defconfig
+          make O=out vendor/enchilada_defconfig
           make -j12 O=out CC=clang
           
       - name: Make AnyKernel3
