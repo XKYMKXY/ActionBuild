@@ -23,8 +23,8 @@ jobs:
       - name: checkout kernel (LineageOS)
         uses: actions/checkout@v3
         with:
-          repository: uwu-gl/kernel_oneplus_sdm845
-          ref: los/lineage-21.0
+          repository: OnePlus6T-Development/kernel_oneplus_sdm845
+          ref: sunos/varuna-wip-ksu
           submodule: recursive
         
       - name: Compile Kernel
